@@ -1,0 +1,29 @@
+{
+    "name": "@npmextras/tsc-tools",
+    "version": "0.0.2",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": "https://github.com/npmextras/tsc-tools.git",
+    "license": "MIT",
+    "bin": {
+        "create-package-tsconfigs": "./dist/create-package-tsconfigs.js",
+        "create-root-tsconfig": "./dist/create-root-tsconfig.js",
+        "tsc-build-command": "./dist/tsc-build-command.js"
+    },
+    "scripts": {
+        "build": "tsc --build",
+        "clean": "tsc --build --clean && rm -rf ./dist/",
+        "watch": "tsc --build --watch"
+    },
+    "devDependencies": {
+        "@types/node": "^13.1.4",
+        "prettier": "^1.19.1",
+        "typescript": "^3.7.4"
+    },
+    "dependencies": {
+        "execa": "^4.0.0"
+    },
+    "peerDependencies": {
+        "lerna": "^3"
+    }
+}
