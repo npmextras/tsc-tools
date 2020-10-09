@@ -13,7 +13,8 @@
     "scripts": {
         "build": "tsc --build",
         "clean": "tsc --build --clean && rm -rf ./dist/",
-        "watch": "tsc --build --watch"
+        "watch": "tsc --build --watch",
+        "prepublishOnly": "yarn clean && yarn build"
     },
     "devDependencies": {
         "@types/node": "^13.1.4",
